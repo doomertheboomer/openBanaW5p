@@ -14,8 +14,8 @@ void log(const char* format, ...)
 	va_list args;
 	va_start(args, format);
 	char fmt[1024] = "[OpenBanapass] ";
-	strcat(fmt, format);
-	vsprintf(buffer, fmt, args);
+	strcat_s(fmt, format);
+	vsprintf_s(buffer, fmt, args);
 	OutputDebugStringA(buffer);
 	va_end(args);
 }
